@@ -24,18 +24,29 @@ The goal of this project is to provide a way for event planners to encentivise p
 - Give reward to user
 
 ### User
-- Join event
+- Join event by adding yourself as a user
 - See balance
 - see reward categories
-- Add money to the pot
+- Add OST to the pot by paying the admin account
 - tip another user
 - recieve reward
-- leader board
+- leader board maybe?
 
 ## Notes
 - Can't delete actions
 - should be a percentage for amounts in actions
 - 
 
+-----
+ # Create your own EVNT
+ 
+ <!-- Remix Button -->
+<a href="https://glitch.com/edit/#!/remix/incent-event">
+  <img src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726" alt="remix button" aria-label="remix" height="33">
+</a>
 
-
+1. Remix this webpage here on glitch. 
+2. Create an account with [OST](https:ost.com) and create the actions that you want people to be able to do at your event.
+3. Add your keys securely to the .env file in your glitch project. 
+4. Customise.
+Secret step number 5. Ask for help :)
