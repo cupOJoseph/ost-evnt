@@ -93,7 +93,3 @@ airdropService.get({id: 'df3da1c3-dec2-4bf7-83cf-2d7f7c1bbe65'}).then(function(r
 
 //TODO make form item show address of the user.
 
-
-function createUser(form){
-  console.log("making user " + form.username.value);
-}
