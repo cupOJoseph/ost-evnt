@@ -50,14 +50,7 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-// endpoint to get all the dreams in the database
-// currently this is the only endpoint, ie. adding dreams won't update the database
-// read the sqlite3 module docs and try to add your own! https://www.npmjs.com/package/sqlite3
-app.get('/getDreams', function(request, response) {
-  db.all('SELECT * from Dreams', function(err, rows) {
-    response.send(JSON.stringify(rows));
-  });
-});
+ 
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
@@ -99,3 +92,8 @@ airdropService.execute({amount: 1,  user_ids: 'ffb7b094-b7ed-477a-9a0b-3c42a39cd
 airdropService.get({id: 'df3da1c3-dec2-4bf7-83cf-2d7f7c1bbe65'}).then(function(res) { console.log(JSON.stringify(res)); }).catch(function(err) { console.log(JSON.stringify(err)); });
 
 //TODO make form item show address of the user.
+
+
+function createUser(form){
+  console.log("making user " + form.username.value);
+}

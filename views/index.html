@@ -51,6 +51,7 @@
       <hr>
       
       <!-- INFO -->
+      <!-- CSS TO DO -->
     <div class="container-fluid">
        <div class="row">
          <div class="col">
@@ -93,20 +94,46 @@
       <!-- JOIN FORM AND USER CREATION-->
     <div class="container-fluid">
        <div class="row">
-         <div class="col">
-              <form action="#" id="person" onsubmit="return createUser(this)">
+         <div class="col-4">
+              <form method="post" action="/" id="person">
                 First name:<br>
-                <input type="text" name="username" value="New Unique Username">
+                <input type="text" name="username" placeholder="New Unique Username">
                 <br>
-                Last name:<br>
-                <input type="text" name="lastname" value="Mouse"><br>
+                Icon Link:<br>
+                <input type="link" name="imglink" placeholder="https://i.imgur.com/q1IY8Va.jpg"><br>
                 My Address: <br>
-                <input type="text" name="address" value="...reading..." readonly>
+                <input type="text" name="address" placeholder="...reading..." readonly>
                 
                 <br><br>
                 <input type="submit" value="Submit">
               </form>
           </div>
+          <div class="col-8">
+            <div class="userblock">
+              <div id="outline" style="overflow:scroll; height:400px;">
+                <div id="big">
+                    
+                  <!-- user example-->
+                  <!-- CSS TO DO -->
+                  <div class="userblock">
+                    <div class="user-content">
+                      <img class="usericon" src="https://i.imgur.com/q1IY8Va.jpg" style="max-height:70px;" alt="person">
+                      <h3 class="username-block">
+                        Test Puppy McCuteface
+                      </h3>
+                      <p class="useraddress-block" style="color:#718F86;">
+                        0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588
+                      </p>
+                      <button class="tipbutton" onclick="createTipAction('0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588')">
+                        🎩 Tip this person.
+                      </button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+         </div>
        </div>
      </div>
     </main>
