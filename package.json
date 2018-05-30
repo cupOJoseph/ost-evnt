@@ -10,10 +10,11 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@ostdotcom/ost-sdk-js": "^1.0.0",
     "express": "^4.16.3",
     "sqlite3": "^4.0.0",
     "vue": "^2.5.16",
-    "@ostdotcom/ost-sdk-js":"^1.0.0"
+    "web3": "^1.0.0-beta.34"
   },
   "engines": {
     "node": "8.x"

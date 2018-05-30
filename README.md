@@ -3,7 +3,7 @@ Welcome to Incent-Event
 
 Created by the [Hackital](https://hackital.io) team.
 
-The goal of this project is to provide a way for event planners to encentivise partcipants to be most engaged.  As a hackathon organizing team, our events are most successful when people are going to workshops, teaching each other, and partcipating in mini contests.  We want to encourage this behavior and turn the focus away from winning the contest towards getting the most from the experience.
+The goal of this project is to provide a way for event planners to encentivise partcipants to be most engaged.  As a hackathon organizing team, our events are most successful when people are going to workshops, teaching each other, and partcipating in mini contests.  We want to encourage this behavior and turn the focus away from winning the contest and towards getting the most from the experience.
 
 -----
 
@@ -38,7 +38,7 @@ The goal of this project is to provide a way for event planners to encentivise p
 - 
 
 -----
- # Create your own EVNT
+ # Create your own IVNT
  
  <!-- Remix Button -->
 <a href="https://glitch.com/edit/#!/remix/incent-event">

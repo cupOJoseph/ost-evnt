@@ -82,10 +82,18 @@ const ostObj = new OSTSDK({apiKey: api_key, apiSecret: api_secret, apiEndpoint: 
 //const object for ost api that are useful
 const userService = ostObj.services.users;
 const airdropService = ostObj.services.airdrops;
+const actionService = ostObj.services.actions;
 
 
-var userAlice = userService.create({name: 'Alice'}).then(function(a){console.log(JSON.stringify(a))}).catch(console.log); //  returns object containing Alice's id, among other information, which you will need later
-var userBob = userService.create({name: 'Bob'}).then(function(a){console.log(JSON.stringify(a))}).catch(console.log);  // returns object containing Bob's id, among other information, which you will need later
+//var userAlice = userService.create({name: 'Alice'}).then(function(a){console.log(JSON.stringify(a))}).catch(console.log); //  returns object containing Alice's id, among other information, which you will need later
+//var userBob = userService.create({name: 'Bob'}).then(function(a){console.log(JSON.stringify(a))}).catch(console.log);  // returns object containing Bob's id, among other information, which you will need later
 
-airdropService.execute({amount: 1, user_ids: 'ffb7b094-b7ed-477a-9a0b-3c42a39cd7d8'}).then(function(res) { console.log(JSON.stringify(res)); }).catch(function(err) { console.log(JSON.stringify(err)); }); //airdrops 1 BT to the selected user id.
+console.log("airdropping!");
+airdropService.execute({amount: 1,  user_ids: 'ffb7b094-b7ed-477a-9a0b-3c42a39cd7d8'}).then(function(res) { console.log(JSON.stringify(res)); }).catch(function(err) { console.log(JSON.stringify(err)); }); //airdrops 1 BT to the selected user id.
+
+//airdrop tokens to the address. airdrop based on returned id from executed airdrop command above.
+airdropService.get({id: 'df3da1c3-dec2-4bf7-83cf-2d7f7c1bbe65'}).then(function(res) { console.log(JSON.stringify(res)); }).catch(function(err) { console.log(JSON.stringify(err)); });
+
+
+
 
