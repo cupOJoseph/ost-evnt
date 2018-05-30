@@ -90,12 +90,43 @@
      </div>
       
       <hr>
+     <!-- TIMER COUNT DOWN - NEEDS CSS-->
+     <div class="container-fluid">
+       <div class="row">
+         <div class="col">
+            <h2>
+                Time until final payouts: 
+           </h2>
+           <div id="countdown"></div>
+           <div class="units-of-time">
+             <p>
+               Days
+             </p>
+             <p>
+               Hours
+             </p>
+             <p>
+               Minutes
+             </p>
+             <p>
+               Seconds
+             </p>
+           </div>
+          </div>
+       </div>
+     </div>
+   
+      
+      <hr>
       
       <!-- JOIN FORM AND USER CREATION-->
     <div class="container-fluid">
        <div class="row">
-         <div class="col-4">
-              <form method="post" action="/" id="person">
+         <div class="col-md-4">
+           <h2>
+             Join the Event
+           </h2>
+              <form action="#" id="person" onsubmit="return createUser(this)">
                 First name:<br>
                 <input type="text" name="username" placeholder="New Unique Username">
                 <br>
@@ -108,7 +139,10 @@
                 <input type="submit" value="Submit">
               </form>
           </div>
-          <div class="col-8">
+          <div class="col-md-8">
+            <h2>
+              Participants
+            </h2>
             <div class="userblock">
               <div id="outline" style="overflow:scroll; height:400px;">
                 <div id="big">
@@ -124,7 +158,20 @@
                       <p class="useraddress-block" style="color:#718F86;">
                         0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588
                       </p>
-                      <button class="tipbutton" onclick="createTipAction('0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588')">
+                      <button class="tipbutton" onclick="createTipAction(`0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588`)">
+                        🎩 Tip this person.
+                      </button>
+                    </div>
+                    
+                    <div class="user-content">
+                      <img class="usericon" src="https://i.imgur.com/q1IY8Va.jpg" style="max-height:70px;" alt="person">
+                      <h3 class="username-block">
+                        Test Puppy #3 McCuteface
+                      </h3>
+                      <p class="useraddress-block" style="color:#718F86;">
+                        0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588
+                      </p>
+                      <button class="tipbutton" onclick="createTipAction(`0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588`)">
                         🎩 Tip this person.
                       </button>
                     </div>
@@ -136,6 +183,29 @@
          </div>
        </div>
      </div>
+      
+      <hr>
+      
+      <div class="container">
+       <div class="row">
+         <div class="col-6s">
+           <h2>
+             Conversion
+           </h2>
+            <div class="convertBox">
+              <ul>
+                <li>1 IVNT</li>
+                <li>0.592 OST⍺</li>
+                <li>$0.08</li>
+              </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+   
+      
+      <hr>
+      
     </main>
     
     
