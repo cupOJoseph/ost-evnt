@@ -1,0 +1,165 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Incentivised Hackathon</title>
+    <meta name="description" content="A clone-able template for incentivising use of OST token at an event">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+  </head>
+  <body>
+     <div class="container-fluid">
+       <div class="row">
+         <div class="col">
+              <header>
+                  <h1>
+                    Incentivised Hackathon - IVNT token
+                  </h1>
+              </header>
+          </div>
+       </div>
+     </div>    
+    
+
+    <main>
+    
+      <!-- outline -->
+     <div class="container-fluid">
+       <div class="row">
+         <div class="col">
+              
+          </div>
+       </div>
+     </div>
+      
+      <hr>
+      
+      <!-- INFO -->
+      <!-- CSS TO DO -->
+    <div class="container-fluid">
+       <div class="row">
+         <div class="col">
+              <!-- INFORMATION -->
+               <h2>
+                 Make the most of the hackathon
+               </h2>
+               <p>
+                 You will get the most out of the hackathon if you try to get as many IVNT tokens as you can.
+           </p>
+          </div>
+       </div>
+        <div>
+          <div class="col">
+            <h2>
+              Earn IVNT tokens.
+            </h2>
+            <p>
+              There are several ways to earn tokens.  We will also be periodically airdropping tokens to air participants present throughout the event, so come for the very start and stay until the end!
+            </p>
+            <h3>
+              Total IVNT up for grabs this event: <strong>5,000</strong>
+            </h3>
+            <ul>
+              <li>Win - First Prize: 1,200</li>
+              <li>Win - Second Prize: 800</li>
+              <li>Win - Third Prize: 400</li>
+              <li>Attend a workshop: 10</li>
+              <li>Attend a mini event: 5</li>
+              <li>Submit your project: 50</li>
+              <li>Get tips from fellow participants.</li>
+              <li>Be helpful to the event staff for tips from us too!</li>
+            </ul>
+          </div>
+      </div>
+     </div>
+      
+      <hr>
+      
+      <!-- JOIN FORM AND USER CREATION-->
+    <div class="container-fluid">
+       <div class="row">
+         <div class="col-4">
+              <form method="post" action="/" id="person">
+                First name:<br>
+                <input type="text" name="username" placeholder="New Unique Username">
+                <br>
+                Icon Link:<br>
+                <input type="link" name="imglink" placeholder="https://i.imgur.com/q1IY8Va.jpg"><br>
+                My Address: <br>
+                <input type="text" name="address" placeholder="...reading..." readonly>
+                
+                <br><br>
+                <input type="submit" value="Submit">
+              </form>
+          </div>
+          <div class="col-8">
+            <div class="userblock">
+              <div id="outline" style="overflow:scroll; height:400px;">
+                <div id="big">
+                    
+                  <!-- user example-->
+                  <!-- CSS TO DO -->
+                  <div class="userblock">
+                    <div class="user-content">
+                      <img class="usericon" src="https://i.imgur.com/q1IY8Va.jpg" style="max-height:70px;" alt="person">
+                      <h3 class="username-block">
+                        Test Puppy McCuteface
+                      </h3>
+                      <p class="useraddress-block" style="color:#718F86;">
+                        0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588
+                      </p>
+                      <button class="tipbutton" onclick="createTipAction('0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588')">
+                        🎩 Tip this person.
+                      </button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+         </div>
+       </div>
+     </div>
+    </main>
+    
+    
+    <header>
+         <footer>
+           <h3>Made with ❤️ by the <a href="https://hackital.io">Hackital</a> team.</h3>
+        </footer>
+    </header>
+
+    
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js"></script>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    
+    
+  </body>
+</html>
