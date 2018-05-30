@@ -5,6 +5,10 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var Web3 = require('web3');
+
+//console.log(Web3); //test to see if global web3 object is working. It is.
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // we've started you off with Express, 
@@ -94,6 +98,4 @@ airdropService.execute({amount: 1,  user_ids: 'ffb7b094-b7ed-477a-9a0b-3c42a39cd
 //airdrop tokens to the address. airdrop based on returned id from executed airdrop command above.
 airdropService.get({id: 'df3da1c3-dec2-4bf7-83cf-2d7f7c1bbe65'}).then(function(res) { console.log(JSON.stringify(res)); }).catch(function(err) { console.log(JSON.stringify(err)); });
 
-
-
-
+//TODO make form item show address of the user.
