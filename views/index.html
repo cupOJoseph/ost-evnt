@@ -31,7 +31,7 @@
          <div class="col">
               <header>
                   <h1>
-                    Incentivised Hackathon - IVNT token
+                    Incentivised <br> Hackathon - IVNT token
                   </h1>
               </header>
           </div>
@@ -54,14 +54,14 @@
       
       <!-- INFO -->
       <!-- CSS TO DO -->
-    <div class="container-fluid">
+    <div class="container-fluid info">
        <div class="row">
          <div class="col">
               <!-- INFORMATION -->
-               <h2>
+               <h2 class="nomargin">
                  Make the most of the hackathon
                </h2>
-               <p>
+               <p class="nomargin">
                  You will get the most out of the hackathon if you try to get as many IVNT tokens as you can.
            </p>
           </div>
@@ -71,13 +71,17 @@
             <h2>
               Earn IVNT tokens.
             </h2>
-            <p>
+            <div class="row justify-content-center">
+         <div class="col-4">
+            <p class="nomargin">
               There are several ways to earn tokens.  We will also be periodically airdropping tokens to air participants present throughout the event, so come for the very start and stay until the end!
             </p>
+              </div>
+            </div>
             <h3>
-              Total IVNT up for grabs this event: <strong>5,000</strong>
+              Total IVNT up for grabs this event: <span>5,000</span>
             </h3>
-            <ul>
+            <ul class="nomargin">
               <li>Win - First Prize: 1,200</li>
               <li>Win - Second Prize: 800</li>
               <li>Win - Third Prize: 400</li>
@@ -93,7 +97,7 @@
       
       <hr>
      <!-- TIMER COUNT DOWN - NEEDS CSS-->
-     <div class="container-fluid">
+     <div class="container-fluid countdown-box">
        <div class="row">
          <div class="col">
             <h2>
@@ -101,17 +105,17 @@
            </h2>
            <div id="countdown"></div>
            <div class="units-of-time">
-             <p>
-               Days
+             <p class="days">
+               DAYS
              </p>
-             <p>
-               Hours
+             <p class="hours">
+               HOURS
              </p>
-             <p>
-               Minutes
+             <p class="minutes">
+               MINUTES
              </p>
-             <p>
-               Seconds
+             <p class="seconds">
+               SECONDS
              </p>
            </div>
           </div>
@@ -147,7 +151,7 @@
             <h2>
               Participants
             </h2>
-            <div class="userblock">
+            <div class="userarea">
               <div id="outline" style="overflow:scroll; height:400px;">
                 <div id="big">
                     
@@ -167,10 +171,11 @@
                       </button>
                     </div>
                     
+                    <div class="userblock">
                     <div class="user-content">
                       <img class="usericon" src="https://i.imgur.com/q1IY8Va.jpg" style="max-height:70px;" alt="person">
                       <h3 class="username-block">
-                        Test Puppy #3 McCuteface
+                        Test Puppy McCuteface 2
                       </h3>
                       <p class="useraddress-block" style="color:#718F86;">
                         0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588
@@ -179,8 +184,38 @@
                         🎩 Tip this person.
                       </button>
                     </div>
-                  </div>
+                    </div>
+                    
+                    <div class="userblock">
+                    <div class="user-content">
+                      <img class="usericon" src="https://i.imgur.com/q1IY8Va.jpg" style="max-height:70px;" alt="person">
+                      <h3 class="username-block">
+                        Test Puppy McCuteface 3
+                      </h3>
+                      <p class="useraddress-block" style="color:#718F86;">
+                        0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588
+                      </p>
+                      <button class="tipbutton" onclick="createTipAction(`0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588`)">
+                        🎩 Tip this person.
+                      </button>
+                    </div>
+                    </div>
                   
+                    <div class="userblock">
+                    <div class="user-content">
+                      <img class="usericon" src="https://i.imgur.com/q1IY8Va.jpg" style="max-height:70px;" alt="person">
+                      <h3 class="username-block">
+                        Test Puppy McCuteface 4
+                      </h3>
+                      <p class="useraddress-block" style="color:#718F86;">
+                        0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588
+                      </p>
+                      <button class="tipbutton" onclick="createTipAction(`0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588`)">
+                        🎩 Tip this person.
+                      </button>
+                    </div>
+                    </div>
+                    
                 </div>
               </div>
             </div>
@@ -192,15 +227,17 @@
       
       <div class="container">
        <div class="row">
-         <div class="col-6s">
-           <h2>
+         <div class="col">
+           <h2 class="convheader">
              Conversion
            </h2>
             <div class="convertBox">
               <ul>
-                <li>1 IVNT</li>
-                <li>0.592 OST⍺</li>
-                <li>$0.08</li>
+                <li><span>1</span> IVNT</li>
+                <li class="equals">=</li>
+                <li><span>0.592</span> OST⍺</li>
+                <li class="equals">=</li>
+                <li>$<span>0.08</span></li>
               </ul>
            </div>
          </div>
@@ -208,7 +245,6 @@
      </div>
    
       
-      <hr>
       
     </main>
     
