@@ -6,8 +6,12 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var Web3 = require('web3');
+var web3 = new Web3();
 
 //console.log(Web3); //test to see if global web3 object is working. It is.
+
+web3 = new Web3(web3.currentProvider);
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -48,7 +52,28 @@ db.serialize(function(){
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
+  
+//  response.getElementById("curr_coinbase").placeholder = web3.eth.coinbase;
 });
+
+//what to do when you see a post request to coinbase
+app.post("/newuser", function (request, response) {
+  console.log("got the post " + String(request.body));
+  console.log(request)
+  response.end("it worked");
+});
+  
+
+/*
+var Web3 = require('web3');
+        var web3 = new Web3();
+        if (typeof web3 !== 'undefined') {
+          web3 = new Web3(web3.currentProvider);
+        } else {
+          // set the provider you want from Web3.providers
+          web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+        }
+        console.log(web3.eth.coinbase)*/
 
  
 
@@ -92,4 +117,7 @@ airdropService.execute({amount: 1,  user_ids: 'ffb7b094-b7ed-477a-9a0b-3c42a39cd
 airdropService.get({id: 'df3da1c3-dec2-4bf7-83cf-2d7f7c1bbe65'}).then(function(res) { console.log(JSON.stringify(res)); }).catch(function(err) { console.log(JSON.stringify(err)); });
 
 //TODO make form item show address of the user.
+
+
+
 
