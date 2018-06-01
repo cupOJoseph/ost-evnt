@@ -1,6 +1,8 @@
 /* styles */
 /* called by your view template */
 
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 * {
   box-sizing: border-box;
 }
@@ -8,19 +10,76 @@
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
+  text-align: center;
 }
 
-h1 {
-  font-style: italic;
-  color: #373fff;
+main {
+  text-align: center;
 }
 
 .bold {
   font-weight: bold;
 }
 
-p {
-  max-width: 600px;
+.nomargin {
+  text-align: center;
+  margin: 0;
+  margin-left: 0;
+}
+
+.col, .row, .container-fluid {
+  text-align: center;
+  margin-top: 20px;
+}
+
+div h1, div h2, div h3 {
+  color: #a4ce9d;
+  margin-top: .5rem;
+}
+
+header h1 {
+  font-style: italic;
+  color: grey;
+  text-align: left;
+  padding-top: 10px;
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  margin-left: 35%;
+}
+
+div.info {
+  padding: 10px;
+}
+
+#countdown {
+  font-weight: bold;
+  font-size: 36pt;
+  font-family: monospace;
+}
+
+.countdown-box {
+  background-color: rgba(119, 221, 119, .48);
+}
+
+.countdown-box h2 {
+  color: grey;
+}
+
+.units-of-time {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-size: 36px;
+}
+
+.unit {
+  font-size: 18pt;
+}
+
+h3 span {
+  font-weight: bold;
+  font-size: 36px;
+  color: #77dd77;
+  font-style: italic;
 }
 
 form {
@@ -28,7 +87,7 @@ form {
   
   margin-bottom: 25px;
   padding: 15px;
-  background-color: cyan;
+  background-color: #77dd77;
   display: inline-block;
   width: 100%;
   max-width: 340px;
@@ -62,21 +121,109 @@ button:active {
   box-shadow: none;
 }
 
-li {
+ul.nomargin li {
   margin-bottom: 5px;
+  width: 30%;
+  margin: auto;
+}
+
+li:hover {
+  background-color: rgba(255, 0, 0, .4)
+}
+
+li span {
+  color: #77dd77;
 }
 
 footer {
   margin-top: 50px;
   padding-top: 25px;
   border-top: 1px solid lightgrey;
+  text-align: center;
+  color: grey;
+}
+
+footer h3 {
+  font-size: 20px;
+}
+
+footer a {
+  color: #77dd77;
+}
+
+footer a:hover {
+  color: #77bb77;
+  text-decoration: none;
 }
 
 #big {
   min-height: 1500px ;/*arbitrary to show scrolling*/
   
     /*cool yellow to red gradiant*/
-  background: #f12711;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+*/
+  background: #77dd77;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #77dd77, #7777dd);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #77dd77, #7777dd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+*/
+}
+
+.userblock {
+  text-align: left;
+  border-bottom: 1px solid grey;
+  height: 90px;
+}
+
+.username-block {
+  display: inline;
+  color: grey;
+  margin-top: -10px;
+  margin-left: 25%;
+}
+
+.usericon {
+  margin: 5px;
+}
+
+.useraddress-block {
+  display: block;
+  margin-top: -20px;
+  margin-left: 29.5%;
+}
+
+.tipbutton {
+  float: left;
+  margin-left: 80%;
+  margin-top: -60px;
+}
+
+.convertBox li {
+  display: inline;
+  text-align: center;
+  border: 1px solid #77dd77;
+  padding: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 36px;
+  margin: -37px;
+}
+
+.convertBox li:hover {
+  background-color: initial;
+}
+
+.convheader {
+  margin-bottom: 20px;
+}
+
+.convertBox ul {
+  width: 100%;
+}
+
+.convertBox .equals {
+  border: none;
+  background-color: initial;
+}
+
+.convertBox .equals:before {
+  position: absolute;
+  content: '=';
+  background-color: white;
 }

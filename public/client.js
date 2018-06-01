@@ -1,26 +1,41 @@
 // client-side js
 // run by the browser each time your view template referencing it is loaded
 
+const userform = document.forms[0];
 
-function createUser(form){
-  console.log("making user " + form.username.value);
-  
+ userform.onsubmit = function(event) {
+    // stop our form submission from refreshing the page
+    event.preventDefault();
+   
+   console.log("making user " + userform.elements['username']);
+  // stop our form submission from refreshing the page
+  event.preventDefault();
   var list = document.getElementById("big");
+   console.log(userform.elements["imglink"]);
+   console.log(userform.elements["username"]);
   list.innerHTML += 
   '\
       <div class="user-content">\
-        <img class="usericon" src="${form.imglink}" style="max-height:70px;" alt="person">\
+        <img class="usericon" src="' + userform.elements["imglink"].value + '" style="max-height:70px;" alt="Img header">\
         <h3 class="username-block">\
-            ${form.username}\
+            '+ userform.elements["username"].value + '\
         </h3>\
         <p class="useraddress-block" style="color:#718F86;">\
-                        0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588\
+                        0xF4EbAbA0445a21B35f9Bdd919DCC967a30BE83CB\
          </p>\
-        <button class="tipbutton" onclick="createTipAction(`0xa634fB120D8e7B4c39919Ed75E65c1Af1678F588`)">\
+        <button class="tipbutton" onclick="createTipAction(`0xF4EbAbA0445a21B35f9Bdd919DCC967a30BE83CB`)">\
               🎩 Tip this person.\
         </button>\
         </div> '
-}
+   
+     var xhr = new XMLHttpRequest();
+    xhr.open('POST', "https://incent-event.glitch.me/newuser", true);
+   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     
+    var response = xhr.send(String({ name: userform.elements["username"].value}) );
+    console.log(response);
+ }
+
 
 function createTipAction(address){
   console.log("address = " + address)
@@ -45,12 +60,29 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
     // Output the result in an element with id="demo"
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-    
+    document.getElementsByClassName("days")[0].innerHTML = days + ' <span class="unit">DAYS</span>'
+    document.getElementsByClassName("hours")[0].innerHTML = hours + ' <span class="unit">HOURS</span>'
+    document.getElementsByClassName("minutes")[0].innerHTML = minutes + ' <span class="unit">MINUTES</span>'
+    document.getElementsByClassName("seconds")[0].innerHTML = seconds + ' <span class="unit">SECONDS</span>'
+  
+  
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+/*var Web3 = require(web3)
+var web3 = new Web3();
+        if (typeof web3 !== 'undefined') {
+          web3 = new Web3(web3.currentProvider);
+        } else {
+          // set the provider you want from Web3.providers
+          web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+        }
+        console.log(web3.eth.coinbase)*/
+
+
+
+
