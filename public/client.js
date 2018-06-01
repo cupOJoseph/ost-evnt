@@ -14,7 +14,7 @@ const userform = document.forms[0];
    console.log(userform.elements["imglink"]);
    console.log(userform.elements["username"]);
   list.innerHTML += 
-  '\
+  '\<div class="userblock">\
       <div class="user-content">\
         <img class="usericon" src="' + userform.elements["imglink"].value + '" style="max-height:70px;" alt="Img header">\
         <h3 class="username-block">\
@@ -26,7 +26,8 @@ const userform = document.forms[0];
         <button class="tipbutton" onclick="createTipAction(`0xF4EbAbA0445a21B35f9Bdd919DCC967a30BE83CB`)">\
               🎩 Tip this person.\
         </button>\
-        </div> '
+        </div> \
+        </div>'
    
      var xhr = new XMLHttpRequest();
     xhr.open('POST', "https://incent-event.glitch.me/newuser", true);
@@ -38,7 +39,9 @@ const userform = document.forms[0];
 
 
 function createTipAction(address){
-  console.log("address = " + address)
+  console.log("address = " + address);
+  
+  console.log("Sending request 'request_timestamp=1527818673&signature=a8fa73259f39ffcd74a9bf89332027d99252b5f05d18c2f03bc462587b5c269b&api_key=464d965ed75bf0dbc99b&from_user_id=fd56915f-839f-4e87-8c1f-23ddf7e5c0a8&to_user_id=183b98c2-517f-44a2-b16a-bb64fead36f4&action_id=36810&amount=0.129424970309926062");
 }
 
 // Set the date we're counting down to
