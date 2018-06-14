@@ -1,34 +1,34 @@
 Welcome to Incent-Event
 =================
 
+## Results
+
+We were added as a successful integration
+
+https://ost.com/challenges
+
 Created by the [Hackital](https://hackital.io) team.
 
 The goal of this project is to provide a way for event planners to encentivise partcipants to be most engaged.  As a hackathon organizing team, our events are most successful when people are going to workshops, teaching each other, and partcipating in mini contests.  We want to encourage this behavior and turn the focus away from winning the contest and towards getting the most from the experience.
 
 -----
 
-# Specs and Uses
-
 ## Complete
+- tip another user
+- Join event by adding yourself as a user
+- See balance
+- see reward categories
+- Give reward to user
 
-### Admin
-- .
-### User
-- .
 
 ## WIP
 
 ### Admin
 - login with uport to console
 - Add reward category to event
-- Give reward to user
 
 ### User
-- Join event by adding yourself as a user
-- See balance
-- see reward categories
 - Add OST to the pot by paying the admin account
-- tip another user
 - recieve reward
 - leader board maybe?
 
